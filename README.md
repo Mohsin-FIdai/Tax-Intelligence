@@ -1,6 +1,5 @@
 # TaxIntel AI
 
-> Enterprise-grade AI-powered Tax Compliance & Intelligence Platform for Pakistan
 
 [![Next.js](https://img.shields.io/badge/Next.js-14+-black.svg)](https://nextjs.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-green.svg)](https://fastapi.tiangolo.com)
