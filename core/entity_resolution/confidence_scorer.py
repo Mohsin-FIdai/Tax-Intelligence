@@ -364,10 +364,12 @@ def explain_match(record1: dict, record2: dict) -> dict:
             decision = "MERGED"
             overall_confidence = 70.0
 
-    # 3. REVIEW: some evidence but not enough for auto-merge
+    # 3. Same CNIC but different name → identity conflict
     elif cnic_exact and not name_similar and not father_similar:
-        risk_level = "Medium Risk"
-        merge_reason = "Review: CNIC matches but Name/Father differs"
+        risk_level = "High Risk"
+        merge_reason = "Conflict: Same CNIC but Different Name"
+        decision = "CONFLICT"
+        overall_confidence = 100.0
     elif phone_exact and name_similar:
         risk_level = "Medium Risk"
         merge_reason = "Review: Phone + Name match, needs more evidence"
