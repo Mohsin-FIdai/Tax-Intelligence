@@ -324,9 +324,10 @@ def explain_match(record1: dict, record2: dict) -> dict:
                 overall_confidence *= 0.6
         overall_confidence = round(overall_confidence, 1)
 
-    # 1. Hard conflicts: different CNIC but shared identifiers
-    # Exclude cases where Name + Father Name strictly match, because we'll auto-merge them below
-    if cnic_conflict and (name_similar or phone_exact) and not (name_similar and father_similar):
+    # 1. Hard conflicts: different CNIC but shared *specific* identifiers
+    #    Name + City alone is NOT a conflict (common names in the same city).
+    #    Requires phone or address match as strong personal evidence.
+    if cnic_conflict and (phone_exact or (name_similar and address_similar)) and not (name_similar and father_similar):
         risk_level = "High Risk"
         merge_reason = "Conflict: Shared Identifiers but Different CNIC"
         decision = "CONFLICT"
