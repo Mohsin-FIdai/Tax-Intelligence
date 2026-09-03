@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# C extensions
+*.so
+
+# Environment
+venv/
+env/
+.env
+.env.*
+!.env.example
+.venv
+python_env/
+env.bak/
+venv.bak/
+
+# Project specifics
+data/
+models_store/
+reports/
+backend.log
+frontend.log
+pipeline_log.txt
+*.log
+pipeline_profile.json
+
+# Streamlit (legacy)
+.streamlit/
+
+# OS/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Frontend (if not already handled in frontend/.gitignore)
+node_modules/
+.next/
+out/

@@ -1,0 +1,39 @@
+# ============================================
+# Graph AI Tax Intelligence Platform
+# Python Dependencies
+# ============================================
+
+# --- Dashboard & UI ---
+streamlit>=1.38.0
+plotly>=5.18.0
+pyvis>=0.3.2
+
+# --- Backend API ---
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+
+# --- Data Processing ---
+pandas>=2.1.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# --- Graph Engine ---
+networkx>=3.2
+
+# --- Machine Learning ---
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+shap>=0.44.0
+
+# --- Entity Resolution ---
+rapidfuzz>=3.6.0
+
+# --- Data Generation ---
+faker>=22.0.0
+
+# --- PDF Reports ---
+fpdf2>=2.7.0
+
+# --- Utilities ---
+joblib>=1.3.0

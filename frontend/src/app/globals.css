@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+.gov-panel {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.vis-tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background-color: #f2f2e9 !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 13px;
+  z-index: 99999 !important;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  pointer-events: none;
+}
+
+/* === LOGIN PAGE ANIMATIONS === */
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+.animate-\[shimmer_1\.5s_infinite\] {
+  animation: shimmer 1.5s infinite;
+}
+
+/* Floating particle animation */
+@keyframes float-up {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+.animate-float-particle {
+  animation: float-up linear infinite;
+}
+
+/* Pulsing glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(45, 212, 191, 0.3), 0 0 15px rgba(45, 212, 191, 0.1); }
+  50% { box-shadow: 0 0 15px rgba(45, 212, 191, 0.6), 0 0 40px rgba(45, 212, 191, 0.2); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Scan line effect */
+@keyframes scan-line {
+  0% { top: -2px; }
+  100% { top: 100%; }
+}
+
+.animate-scan-line {
+  animation: scan-line 4s linear infinite;
+}
+
+/* Fade in up entrance */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Staggered delays */
+.anim-delay-100 { animation-delay: 0.1s; opacity: 0; }
+.anim-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.anim-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.anim-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.anim-delay-500 { animation-delay: 0.5s; opacity: 0; }
+.anim-delay-600 { animation-delay: 0.6s; opacity: 0; }
+.anim-delay-700 { animation-delay: 0.7s; opacity: 0; }
+
+/* Orbit rotation */
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-orbit {
+  animation: orbit 60s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit 45s linear infinite reverse;
+}
+
+/* Typing cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Gentle hover float */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Network node pulse */
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.8); opacity: 1; }
+}
+
+.animate-node-pulse {
+  animation: node-pulse 3s ease-in-out infinite;
+}
