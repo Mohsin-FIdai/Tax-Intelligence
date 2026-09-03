@@ -29,8 +29,6 @@ shap>=0.44.0
 # --- Entity Resolution ---
 rapidfuzz>=3.6.0
 
-# --- Data Generation ---
-faker>=22.0.0
 
 # --- PDF Reports ---
 fpdf2>=2.7.0

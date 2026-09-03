@@ -69,7 +69,7 @@ async def get_feature_importance() -> APIResponse:
     """Return the feature-importance ranking used by the ML ensemble model.
 
     If a pre-computed feature importance file exists in ``data/processed/``,
-    it is returned directly.  Otherwise a reasonable synthetic importance
+    it is returned directly.  Otherwise a reasonable fallback importance
     derived from the configured deviation weights is returned.
     """
     svc = DataService()

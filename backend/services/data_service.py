@@ -837,8 +837,8 @@ class DataService:
     def get_feature_importance(self) -> dict:
         """Return feature importance data."""
         if self.feature_importance_df.empty:
-            # Generate synthetic importance from risk_score column correlations
-            return self._synthetic_feature_importance()
+            # Generate fallback importance from risk_score column correlations
+            return self._fallback_feature_importance()
 
         records = self.feature_importance_df.to_dict(orient="records")
         return {
@@ -846,7 +846,7 @@ class DataService:
             "features": records,
         }
 
-    def _synthetic_feature_importance(self) -> dict:
+    def _fallback_feature_importance(self) -> dict:
         """Create a reasonable feature importance list from available data."""
         features = [
             {"feature": "income_networth_gap", "importance": 0.30},

@@ -152,8 +152,8 @@ class ETLPipeline:
         """Return results from the last run."""
         return self._results
 
-    def run_full_pipeline(self, synthetic_dir: str | Path | None = None) -> dict[str, dict]:
+    def run_full_pipeline(self, source_dir: str | Path | None = None) -> dict[str, dict]:
         """Convenience method: auto-discover CSVs in a directory and run the pipeline."""
-        if synthetic_dir:
-            self.add_sources_from_dir(synthetic_dir, extensions=(".csv",))
+        if source_dir:
+            self.add_sources_from_dir(source_dir, extensions=(".csv",))
         return self.run()
