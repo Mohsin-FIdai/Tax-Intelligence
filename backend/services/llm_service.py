@@ -1,7 +1,7 @@
 """
 Tax Intelligence Platform — LLM Service Layer
 
-Interface to Qwen3-8B via Ollama REST API.
+Interface to qwen2.5:3b via Ollama REST API.
 """
 
 import json

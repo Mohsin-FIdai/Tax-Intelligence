@@ -4,7 +4,7 @@ Tax Intelligence Platform — Model Service Layer
 A thread-safe singleton that lazily loads AI models:
 - bge-m3 (embeddings)
 - bge-reranker-base (reranking)
-- Ollama client for Qwen3-8B
+- Ollama client for qwen2.5:3b
 """
 
 import importlib.util
