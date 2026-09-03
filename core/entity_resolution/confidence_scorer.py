@@ -384,6 +384,12 @@ def explain_match(record1: dict, record2: dict) -> dict:
         risk_level = "Low Risk"
         merge_reason = "Insufficient Evidence"
 
+    # 5. Promote: 100% confidence REVIEW → auto-merge
+    if decision == "REVIEW" and overall_confidence >= 100.0:
+        decision = "MERGED"
+        risk_level = "Low Risk"
+        merge_reason = "Auto Merge: Maximum confidence across matched fields"
+
     return {
         "decision": decision,
         "confidence": overall_confidence,
